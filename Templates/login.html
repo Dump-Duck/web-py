@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Đăng nhập!</title>
+    </head>
+    <body>
+        <h1>Đăng nhập tài khoản thành viên:</h1>
+        <form action="{{ request.path }}" method="post">
+            <p>
+                <label for="ten_dang_nhap">Tên đăng nhập:</label>
+                <input type="text" name="ten_dang_nhap" id="ten_dang_nhap">
+            </p>
+            <p>
+                <label for="mat_khau">Mật khẩu:</label>
+                <input type="password" name="mat_khau" id="mat_khau">
+            </p>
+            <p>
+                <input type="submit" value="Đăng nhập">
+            </p>
+        </form>
+        <h3>Nếu chưa có tài khoản thành viên bạn có thể <a href="{{ url_for('register') }}">ấn vào đây </a>để đăng ký tài khoản!</h3>
+    </body>
+</html>

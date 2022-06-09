@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Đăng ký!</title>
+</head>
+<body>
+    <h1>Đăng ký tài khoản thành viên:</h1>
+    <form action="{{ request.path }}" method="post">
+        <p>
+            <label for="ho_va_ten">Họ và tên:</label>
+            <input type="text" name="ho_va_ten" id="ho_va_ten">
+        </p>
+        <p>
+            <label for="ngay_sinh">Ngày sinh:</label>
+            <input type="date" name="ngay_sinh" id="ngay_sinh">
+        </p>
+        <p>
+            <label for="so_dien_thoai">Số điện thoại:</label>
+            <input type="text" name="so_dien_thoai" id="so_dien_thoai">
+        </p>
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+        </p>
+        <p>
+            <label for="ten_dang_nhap">Tên đăng nhập:</label>
+            <input type="text" name="ten_dang_nhap" id="ten_dang_nhap">
+        </p>
+        <p>
+            <label for="mat_khau">Mật khẩu:</label>
+            <input type="password" name="mat_khau" id="mat_khau">
+        </p>
+        <p>
+            <label for="mat_khau2">Nhập lại mật khẩu:</label>
+            <input type="password" name="mat_khau2" id="mat_khau2">
+        </p>
+        <p>
+            <input type="submit" value="Đăng ký">
+        </p>
+    </form>
+    <h3>Nếu đã có tài khoản bạn có thể <a href="{{ url_for('login') }}">ấn vào đây</a> để đăng nhập!</h3>
+</body>
+</html>
